@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>IChat :)</title>
 </head>
 <body>
 <fieldset>
@@ -37,13 +37,21 @@
 	poll();
 	
 	function enviar() {
+
+	    var that = this;
+
 		$.ajax({ 
 			type: "POST",
 			cache: false,
 			contentType: "application/json",
 			url: "polling",
-			data: JSON.stringify({ "text" : $("#text").val() })
+			data: JSON.stringify({ "text" : $("#text").val() }),
+            context: this,
+            success: function (data){
+			    this.$("#text").val("")
+            }
 		});
+
 	}
 	
 </script>
