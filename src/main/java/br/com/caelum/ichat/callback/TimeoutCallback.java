@@ -10,7 +10,9 @@ public class TimeoutCallback implements Runnable {
 	
 	private DeferredResult<Message> client;
 	private Queue<DeferredResult<Message>> clients;
-	
+
+	//TODO : fazer commit
+
 	public TimeoutCallback(DeferredResult<Message> client, Queue<DeferredResult<Message>> clients) {
 		this.client = client;
 		this.clients = clients;
