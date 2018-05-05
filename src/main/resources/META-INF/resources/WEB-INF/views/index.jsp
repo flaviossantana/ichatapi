@@ -19,6 +19,7 @@
 
 <script src="js/jquery-3.0.0.min.js"></script>
 <script>
+
 	function poll() {
 		$.ajax({ 
 			type: "GET",
